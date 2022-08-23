@@ -1,4 +1,4 @@
-# cocotb
+# cocotb for absolute idiots
 
 This repo is a synoposis on how to use cocotb for absolute idiots. Or, perhaps, how to use cocotb as a signal processing engineer. 
 
