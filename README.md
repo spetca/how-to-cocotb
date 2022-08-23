@@ -29,3 +29,11 @@ As a DSP engineer, I just want to shove a sinusoid through a verilog module most
   `make COCOTB_RESOLVE_X=ZEROS`
   
   if you care aboue how X's are returned
+
+## Example description
+
+### Adder
+  
+  This is the adder example from cocotb repo. The main benefit here is an example of how to use the makefile to attach your verilog module and simulator. 
+  
+###
