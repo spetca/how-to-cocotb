@@ -1,6 +1,6 @@
 # cocotb for absolute idiots
 
-So you read all of 2 free websites on SystemVerilog. You looked through the convoluted mess of documentaiton that is UVM. Feeling dumb? Me too. I think [cocotb](https://docs.cocotb.org/en/stable/) is here to save us, but it's still a little over my head since I don't work in python everyday. 
+So you read all of 2 free websites on SystemVerilog. You looked through the convoluted mess of documentaiton that is UVM. Feeling dumb? Me too. I think [cocotb](https://docs.cocotb.org/en/stable/) is here to save us, but even cocotb is still a little over my head since I don't work in python everyday. 
 
 This repo is a synoposis on how to use cocotb for absolute idiots. Or, perhaps, how to use cocotb as a signal processing engineer. 
 
