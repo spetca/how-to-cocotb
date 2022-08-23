@@ -1,16 +1,18 @@
 # cocotb for absolute idiots
 
+So you read all of 2 free websites on SystemVerilog. You looked through the convoluted mess of documentaiton that is UVM. Feeling dumb? Me too. I think [cocotb](https://docs.cocotb.org/en/stable/) is here to save us, but it's still a little over my head since I don't work in python everyday. 
+
 This repo is a synoposis on how to use cocotb for absolute idiots. Or, perhaps, how to use cocotb as a signal processing engineer. 
 
-## Impetus
-
-As a DSP engineer, I just want to shove a sinusoid through a verilog module most of the time. This repo aims to be a short intro on how to use cocotb to: 
+As a DSP engineer, you probably just want to shove a sinusoid through a verilog module most of the time and check the output. This repo aims to be a short intro on how to do that. How to do easy things like:
 
   - setup a clock
   - reset a module
   - assign some configuration ports to particular values
   - shove some interesting data through the module
   - check that the data out is correct
+  
+ Eventually, we will work towards more complicated things and maybe one day even figure out how to do everything the *right* way. 
   
 ## Dependencies
 
