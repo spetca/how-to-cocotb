@@ -27,7 +27,6 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###############################################################################
 MODULE = testbench
-MODULE = testbench
 TOPLEVEL = adder
 TOPLEVEL_LANG ?= verilog
 VERILOG_SOURCES = adder.v

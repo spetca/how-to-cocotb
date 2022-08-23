@@ -27,7 +27,6 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###############################################################################
 MODULE = testbench
-MODULE = testbench
 TOPLEVEL = count_up
 TOPLEVEL_LANG ?= verilog
 VERILOG_SOURCES = count_up.v
