@@ -1,7 +1,6 @@
 # Simple tests for an adder module
 import cocotb
 from cocotb.triggers import Timer
-from cocotb.result import TestFailure
 import random
 
 @cocotb.test()
@@ -14,11 +13,8 @@ def adder_basic_test(dut):
     
     yield Timer(2)
     
-    if dut.X != 15:
-        raise TestFailure(
-            "Adder result is incorrect: %s != 15" % str(dut.X)) 
-    else: # these last two lines are not strictly necessary
-        dut.log.info("Ok!")
+    assert dut.X == 15, "Adder result is incorrect: %s != 15" % str(dut.X)
+
 
 @cocotb.test()
 def adder_randomised_test(dut):
@@ -34,9 +30,6 @@ def adder_randomised_test(dut):
         
         yield Timer(2)
         
-        if dut.X != (A + B):
-            raise TestFailure(
-                "Randomised test failed with: %s + %s = %s" %
-                (dut.A, dut.B, dut.X))
-        else: # these last two lines are not strictly necessary
-        	dut.log.info("Ok!")
+        # check to make sure DUT == Predictor
+        assert dut.X == (A+B), "Randomised test failed with: %s + %s = %s" % (dut.A, dut.B, dut.X)
+       

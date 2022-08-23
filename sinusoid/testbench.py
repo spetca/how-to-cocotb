@@ -1,11 +1,9 @@
 # Simple tests for an adder module
 import cocotb
-from cocotb.result import TestFailure
 import random
 from cocotb.clock import Clock
-from cocotb.triggers import Timer, RisingEdge, FallingEdge
+from cocotb.triggers import RisingEdge
 import numpy as np
-from fxpmath import Fxp
 
 # as a non-generator
 def wave(amp, f,smp): 
@@ -13,7 +11,7 @@ def wave(amp, f,smp):
     return sample
 
 @cocotb.test()
-async def basic_count(dut):
+async def pass_thru_test(dut):
     cocotb.start_soon(Clock(dut.clk, 1, units="ms").start())
     count = 0
     sample = 0
