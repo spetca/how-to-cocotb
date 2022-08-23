@@ -4,7 +4,7 @@ So you read all of 2 free websites on SystemVerilog. You looked through the conv
 
 This repo is a synoposis on how to use cocotb for absolute idiots. Or, perhaps, how to use cocotb as a signal processing engineer. 
 
-As a DSP engineer, you probably just want to shove a sinusoid through a verilog module most of the time and check the output. This repo aims to be a short intro on how to do that. How to do easy things like:
+As a DSP engineer, you probably just want to shove a sinusoid through a verilog module and check the output. This repo aims to be a short intro on how to do that - how to do "easy" things like:
 
   - setup a clock
   - reset a module
