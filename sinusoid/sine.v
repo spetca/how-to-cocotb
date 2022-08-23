@@ -1,9 +1,9 @@
 module sine(clk, reset, din, dout);
 input clk; 
-input [7:0] din; 
+input signed [7:0] din; 
 input reset; 
-output [7:0] dout; 
-reg [7:0] dout_reg = 7'b0; 
+output signed [7:0] dout; 
+reg signed [7:0] dout_reg = 7'b0; 
 
 // passthrough
 always @(posedge clk)

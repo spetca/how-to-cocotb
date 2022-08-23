@@ -2,7 +2,7 @@
 import cocotb
 import random
 from cocotb.clock import Clock
-from cocotb.triggers import RisingEdge
+from cocotb.triggers import RisingEdge,FallingEdge
 import numpy as np
 
 # as a non-generator
@@ -16,7 +16,8 @@ async def pass_thru_test(dut):
     new_sample = 0
     last_sample = 0
     dut.din.value = 0
-
+    cnt_clks = 0
+    dut_dout = 0
     # Reset DUT
     dut.reset.value = 1
     for _ in range(2):
@@ -26,13 +27,14 @@ async def pass_thru_test(dut):
     run_this_many_clocks = 500#1clk per ms
     for samp in range(run_this_many_clocks-1):
         await RisingEdge(dut.clk)
-        dut_dout = dut.dout.value
-        last_sample = new_sample
-        new_sample = wave(127, 100,samp)
-        print(new_sample,last_sample, dut_dout.integer)
-        dut.din.value = new_sample; 
-        #assert dut_dout.integer == last_sample, "Adder result is incorrect: %d != %d" % (dut_dout.integer, last_sample)
-                     
+        dut_dout = dut.dout.value.signed_integer
+        assert dut_dout == last_sample, "Adder result is incorrect: %d != %d" % (dut_dout, last_sample)
+        last_sample = dut.din.value.signed_integer
+        dut.din <= wave(127, 100,samp)
+
+
+
+       
 
         
 
