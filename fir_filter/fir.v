@@ -16,19 +16,19 @@ wire  signed [15:0] q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12;
 wire  signed [15:0] a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12;
 
 // coeffs definition
-assign h0  = 0;
-assign h1  = 0;
-assign h2  = 0;
-assign h3  = 0;
-assign h4  = 0;
-assign h5  = 0;
-assign h6  = 1;
-assign h7  = 0;
-assign h8  = 0;
-assign h9  = 0;
-assign h10 = 0;
-assign h11 = 0;
-assign h12 = 0;
+assign h0  = -1;
+assign h1  = 2;
+assign h2  = 2;
+assign h3  = -9;
+assign h4  = -3;
+assign h5  = 38;
+assign h6  = 67;
+assign h7  = 38;
+assign h8  = -3;
+assign h9  = -9;
+assign h10 = 2;
+assign h11 = 2;
+assign h12 = -1;
 
 // each multiply in the chain
 assign m12 = h12 * din; 
