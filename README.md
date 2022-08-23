@@ -32,18 +32,26 @@ As a DSP engineer, I just want to shove a sinusoid through a verilog module most
 
 ## Example description
 
-### Adder
+### 1. Adder
   
   This is the adder example from cocotb repo that just performs A+B. The main benefit here is an example of how to use the makefile to attach your verilog module and simulator. 
   
-### Counter
+### 2. Counter
 
 This is just a verilog module that increments a signal +1 every clock. This example demos how to reset a module at the beginning of a sim. See testbench lines `14-17`
 
-### sinusoid
+### 3. sinusoid
 
-This is a super simple verilog module that passes through a signed input. This example demos how to push a sine wave through your testbench. Not sure if there is a better way to do this. Please advise if you know.
+This is a super simple verilog module that passes through a sinusoid delayed by one clock. This example demos how to push a sine wave through your testbench. Not sure if there is a better way to do this. Please advise if you know.
 
-### fir filter
+### 4. FIR filter
 
 Similar to sinusoid, but with a more complex verilog module. 
+
+### 5. SimpleDriver
+
+TODO - a more complex class based driver that utilizes `fork`
+
+### 6. Configurable FIR
+
+similar to **4**, but with configuration ports. 
