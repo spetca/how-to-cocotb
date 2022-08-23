@@ -12,19 +12,23 @@ def wave(amp, f,smp):
 
 @cocotb.test()
 async def pass_thru_test(dut):
-    cocotb.start_soon(Clock(dut.clk, 1, units="ms").start())
-    new_sample = 0
+    # intialize 
     last_sample = 0
     dut.din.value = 0
     cnt_clks = 0
     dut_dout = 0
+
+    # start clocks
+    cocotb.start_soon(Clock(dut.clk, 1, units="ms").start())
+    
     # Reset DUT
     dut.reset.value = 1
     for _ in range(2):
         await RisingEdge(dut.clk)
     dut.reset.value = 0
 
-    run_this_many_clocks = 500#1clk per ms
+    run_this_many_clocks = 500
+    # process stuff every rising edge
     for samp in range(run_this_many_clocks-1):
         await RisingEdge(dut.clk)
         dut_dout = dut.dout.value.signed_integer
