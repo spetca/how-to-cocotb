@@ -52,7 +52,7 @@ Similar to sinusoid, but with a more complex verilog module.
 
 ### 5. simple_driver
 
-TODO - a more complex class based driver that utilizes `fork`
+a more complex class based driver that utilizes `fork`. This also contains an example of creating a monitor class as well. Currently this is a bit of a mess and if you have some advice on how to better implement things please put the advice in the issues of this repo
 
 ### 6. configurable_fir
 
