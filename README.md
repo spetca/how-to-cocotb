@@ -1,6 +1,6 @@
 # cocotb
 
-This repo is a synoposis on how to use cocotb for absolute idiots. 
+This repo is a synoposis on how to use cocotb for absolute idiots. Or, perhaps, how to use cocotb as a signal processing engineer. 
 
 ## Impetus
 
@@ -10,6 +10,7 @@ As a DSP engineer, I just want to shove a sinusoid through a verilog module most
   - reset a module
   - assign some configuration ports to particular values
   - shove some interesting data through the module
+  - check that the data out is correct
   
 ## Dependencies
 
