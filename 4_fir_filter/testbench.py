@@ -1,4 +1,4 @@
-# Simple tests for an adder module
+# Simple tests for an fir_filter module
 import cocotb
 import random
 from cocotb.clock import Clock

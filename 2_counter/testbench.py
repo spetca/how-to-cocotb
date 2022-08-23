@@ -1,4 +1,4 @@
-# Simple tests for an adder module
+# Simple tests for an counter module
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge
