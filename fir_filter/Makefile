@@ -30,6 +30,8 @@ MODULE = testbench
 TOPLEVEL = fir
 TOPLEVEL_LANG ?= verilog
 VERILOG_SOURCES = $(PWD)/*.v
+COCOTB_HDL_TIMEUNIT = 1ns
+COCOTB_HDL_TIMEPRECISION = 1ps
 include $(shell cocotb-config --makefiles)/Makefile.inc
 
 ifneq ($(or $(filter-out $(TOPLEVEL_LANG),verilog),$(VHDL_SOURCES)),)
