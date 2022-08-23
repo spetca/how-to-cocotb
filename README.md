@@ -32,7 +32,7 @@ As a DSP engineer, you probably just want to shove a sinusoid through a verilog 
   
   if you care aboue how X's are returned
 
-## Example description
+## Description of Each Directory
 
 ### 1. adder
   
