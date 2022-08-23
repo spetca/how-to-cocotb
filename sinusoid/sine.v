@@ -5,6 +5,7 @@ input reset;
 output [7:0] dout; 
 reg [7:0] dout_reg = 7'b0; 
 
+// passthrough
 always @(posedge clk)
 begin
     if(reset) 
