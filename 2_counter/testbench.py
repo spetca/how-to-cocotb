@@ -21,6 +21,6 @@ async def basic_count(dut):
         await RisingEdge(dut.clk)
         v_count = dut.count.value
         mod_cnt = cnt % 16
-        assert v_count.integer == mod_cnt, "Adder result is incorrect: %s != %s" % (str(dut.count.value), mod_cnt)
+        assert v_count.integer == mod_cnt, "counter result is incorrect: %s != %s" % (str(dut.count.value), mod_cnt)
         
 

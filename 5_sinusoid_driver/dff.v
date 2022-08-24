@@ -5,10 +5,10 @@ input  [15:0] d;
 output [15:0] q; 
 reg    [15:0] q_r;
 
-always @(posedge clk or posedge reset)
+always @(posedge clk)
 begin
     if(reset)
-        q_r <= 16'b0;
+        q_r <= 0;
     else
         q_r <= d;
 end

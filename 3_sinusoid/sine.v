@@ -3,7 +3,7 @@ input clk;
 input signed [7:0] din; 
 input reset; 
 output signed [7:0] dout; 
-reg signed [7:0] dout_reg = 7'b0; 
+reg signed [7:0] dout_reg; 
 
 // passthrough
 always @(posedge clk)
