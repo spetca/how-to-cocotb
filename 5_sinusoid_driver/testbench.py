@@ -46,7 +46,6 @@ class OutputMonitor:
     def __init__(self,dut,reset_clock):
         self.dut = dut
         self.reset_clock = reset_clock
-        self.predict = 0
         self.clock_count = 0
         self.pred_cnt = 0
         self.fs = 1000
@@ -81,7 +80,7 @@ async def filter_test(dut):
     #initialize
     dut.din.value = 0
     dut.reset.value = 0
-    reset_clocks = 20 # to ensure we only monitor after resets
+    reset_clocks = 10 # to ensure we only monitor after resets
     # start clock
     cocotb.start_soon(Clock(dut.clk, 1, units="ms").start())
     
